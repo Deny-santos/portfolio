@@ -1,0 +1,114 @@
+#contact {
+    min-height: 80vh; /*this config que não deixava a height ser configurada pq tava no app wrapp como 100vh */
+} 
+.contact__h2{
+    margin-bottom: 5rem;
+}
+.container.contact__container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    gap: 12%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.contact__message {
+    background-color: green;
+    position: absolute;
+    width: 400px;
+    left:  calc(50% - 200px);
+    margin: -5rem auto 0 auto;
+    padding: 0.1rem 2rem;
+    height: 4rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact__message svg{
+    font-size: 3rem;
+    cursor: pointer;
+}
+.contact__message svg:hover {
+    color: rgb(196, 198, 201);
+}
+
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.contact__option:hover {
+    border-color: var(--color-bg-variant);
+    background: transparent;
+}
+
+.contact__icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.contact__option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+}
+.contact__option h5 {
+    color: var(--color-light);
+    word-break: break-all;
+}
+
+/* ========================= FORM ========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+    outline: none;
+}
+
+/* ========= medias queries devices =========== */
+
+@media screen and (max-width: 1024px) {
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        height: max-content;
+    }
+    form button {
+        margin: 30px auto;
+    }   
+}
+
+/* ========= medias queries phone devices =========== */
+
+@media screen and (max-width: 600px) {
+    .container.contact__container {
+        width: var(--container-width-sm);
+    }
+    .contact__message {
+        width: 90%;
+        left: 5%;
+    }
+}
