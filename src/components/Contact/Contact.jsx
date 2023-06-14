@@ -42,7 +42,7 @@ const Contact = () => {
         </div>
         {isSubmitted ? (
           <div>
-            <h3>Thanks for Contact Me, Wait for My Email Message :)</h3>
+            <h3>Thanks for Contact Me, Wait for My Email Message. </h3>
           </div>
         ) : (
 

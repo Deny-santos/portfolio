@@ -1,5 +1,4 @@
 import CV from "./cv.pdf"
-import CV2 from "./cv2.pdf"
 
 import perfilPNGCom from "./perfil-denyCom.png"
 import portifolio2 from "./portifolio2.png"
@@ -20,7 +19,6 @@ import perfilcom from "./perfilCom.jpeg"
 
 export {
     CV,
-    CV2,
     perfilPNGCom,
     perfilcom,
     portifolio1,
