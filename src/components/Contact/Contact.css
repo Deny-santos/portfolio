@@ -89,6 +89,7 @@ input, textarea {
     outline: none;
 }
 
+
 /* ========= medias queries devices =========== */
 
 @media screen and (max-width: 1024px) {

@@ -1,28 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Contact.css"
-import AppWrapp from '../../wrapp/AppWrapp'
 import { BsWhatsapp } from "react-icons/bs"
 import { AiOutlineMail } from "react-icons/ai"
+import useForm from '../../hook/useForm'
+import Sucess from '../Sucess/Sucess'
 
 
-const Contact = () => {
+const Contact = ({sucess}) => {
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    await fetch('https://formsubmit.co/denisson.graca3@gmail.com', {
-      method: 'POST',
-      body: formData,
-    });
-
-    setIsSubmitted(true);
-  };
+  const { handleSubmit, isLoading} = useForm()
 
   return (
-    <section className='height'>
+    <section className='height' id='contact'>
       <h5>Say Something</h5>
       <h2 className='contact__h2'>Contact Me</h2>
       <div className='container contact__container'>
@@ -40,28 +29,27 @@ const Contact = () => {
             <a href="https://api.whatsapp.com/send?phone=7998459078" target={"_blank"} rel='noreferrer'>WhatsApp message</a>
           </article>
         </div>
-        {isSubmitted ? (
-          <div>
-            <h3>Thanks for Contact Me, Wait for My Email Message. </h3>
-          </div>
-        ) : (
+        
+        {sucess && <Sucess text='Message sent successfully' />}
+            <form onSubmit={handleSubmit}>
+                <input type="text" name='name' placeholder='Your Name' required />
+                <input type="email" name='email' placeholder='Your Email' required />
+                <textarea name="message" rows="7" placeholder='Doubts, Suggestions, Requests, ...' required></textarea>
+                <input type="hidden" name='_next' value="http://localhost:3000/#contact" />
+                <button 
+                    className='btn btn-primary' 
+                    type='submit'>
+                        {isLoading ? "Sending": "Send" }
+                </button>
 
-          <form onSubmit={handleSubmit}>
-            <input type="text" name='name' placeholder='Your Name' required />
-            <input type="email" name='email' placeholder='Your Email' required />
-            <textarea name="message" rows="7" placeholder='Doubts, Suggestions, Requests, ...' required></textarea>
-            <input type="hidden" name='_next' value="http://localhost:3000/#contact" />
-            <button className='btn btn-primary' type='submit'>Send</button>
+                <input type="hidden" name='_subject' value={`novo contato DO MEU PORTIFOLIO`} />
+                <input type="text" name='_honey' style={{ display: "none" }} /> {/* evitar span */}
+                <input type="hidden" name='_captcha' value="false" /> {/* desabilitar o captcha */}
+            </form>
 
-            <input type="hidden" name='_subject' value={`novo contato DO MEU PORTIFOLIO`} />
-            <input type="text" name='_honey' style={{ display: "none" }} /> {/* evitar span */}
-            <input type="hidden" name='_captcha' value="false" /> {/* desabilitar o captcha */}
-          </form>
-        )
-        }
       </div>
     </section>
   )
 }
 
-export default AppWrapp(Contact, 'contact')
+export default Contact
