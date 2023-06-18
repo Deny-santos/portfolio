@@ -5,7 +5,37 @@
     height: max-content;
     padding: 10px 70px;
     border-radius: 20px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+    position: fixed;
+    z-index: 10;
+    bottom: 10%;
+    right: -1000px;
+    
+}
+
+.show{
+    animation: showSucessMessage 5s ease-in-out;
+}
+
+
+@keyframes showSucessMessage {
+    0% {
+        opacity: 1;
+        right: -1000px;
+    }
+    5%{
+        right: 30px;
+        opacity: 1;
+    }
+    10% {
+        right: 20px;
+        opacity: 1;
+    }
+    95% {
+        right: 20px;
+        opacity: 1;
+    }
+    100% {
+        right: -1000px;
+        opacity: 0;
+    }
 }

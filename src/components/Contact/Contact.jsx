@@ -30,22 +30,23 @@ const Contact = ({sucess}) => {
           </article>
         </div>
         
-        {sucess && <Sucess text='Message sent successfully' />}
-            <form onSubmit={handleSubmit}>
-                <input type="text" name='name' placeholder='Your Name' required />
-                <input type="email" name='email' placeholder='Your Email' required />
-                <textarea name="message" rows="7" placeholder='Doubts, Suggestions, Requests, ...' required></textarea>
-                <input type="hidden" name='_next' value="http://localhost:3000/#contact" />
-                <button 
-                    className='btn btn-primary' 
-                    type='submit'>
-                        {isLoading ? "Sending": "Send" }
-                </button>
-
-                <input type="hidden" name='_subject' value={`novo contato DO MEU PORTIFOLIO`} />
-                <input type="text" name='_honey' style={{ display: "none" }} /> {/* evitar span */}
-                <input type="hidden" name='_captcha' value="false" /> {/* desabilitar o captcha */}
-            </form>
+            <span>
+              <Sucess text='Message sent successfully' show={sucess}/>
+              <form onSubmit={handleSubmit}>
+                  <input type="text" name='name' placeholder='Your Name' required />
+                  <input type="email" name='email' placeholder='Your Email' required />
+                  <textarea name="message" rows="7" placeholder='Doubts, Suggestions, Requests, ...' required></textarea>
+                  <input type="hidden" name='_next' value="http://localhost:3000/#contact" />
+                  <button
+                      className='btn btn-primary'
+                      type='submit'>
+                          {isLoading ? "Sending": "Send" }
+                  </button>
+                  <input type="hidden" name='_subject' value={`novo contato DO MEU PORTIFOLIO`} />
+                  <input type="text" name='_honey' style={{ display: "none" }} /> {/* evitar span */}
+                  <input type="hidden" name='_captcha' value="false" /> {/* desabilitar o captcha */}
+              </form>
+            </span>
 
       </div>
     </section>
