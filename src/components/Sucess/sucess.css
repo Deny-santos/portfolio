@@ -23,6 +23,15 @@
     animation: showSucessMessage 5s ease-in-out;
 }
 
+.progress{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(60, 0, 255);
+    animation: progress 5.5s ease-in-out;
+}
 
 @keyframes showSucessMessage {
     0% {
@@ -44,5 +53,14 @@
     100% {
         right: -1000px;
         opacity: 0;
+    }
+}
+
+@keyframes progress  {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
     }
 }
