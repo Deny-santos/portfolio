@@ -5,10 +5,12 @@ import HeaderSocial from './HeaderSocial'
 import { me } from "../../assets"
 import AppWrapp from '../../wrapp/AppWrapp'
 import Typical from 'react-typical'
+import Sucess from '../Sucess/Sucess'
 
 const Header = () => {
   return (
     <header>
+      <Sucess show top text='Hello Welcome' />
       <div className="container header__container">
         <h5>Hello, I'm </h5>
         <h1>Deni Santos</h1>

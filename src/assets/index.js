@@ -6,6 +6,7 @@ import astronomy from "./astronomy.png"
 import me from "./me.png"
 import cellphone from "./cellphone-filter.png"
 import socialMedia from "./social-media.png"
+import inglesCoffe from "./ingles-coffe.png"
 
 import portifolio1 from "./portifolio1.jpg"
 import apiTempo from "./apiTempo.jpg"
@@ -30,5 +31,6 @@ export {
     astronomy,
     me,
     cellphone,
-    socialMedia
+    socialMedia,
+    inglesCoffe
 }

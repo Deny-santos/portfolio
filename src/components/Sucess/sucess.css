@@ -7,9 +7,16 @@
     border-radius: 20px;
     position: fixed;
     z-index: 10;
-    bottom: 10%;
     right: -1000px;
-    
+    overflow: hidden;
+}
+
+.top {
+    top: 10%;
+}
+
+.bottom{
+    bottom: 10%;
 }
 
 .show{
