@@ -14,7 +14,7 @@ import car from "./denyCar.jpg"
 import login from "./login.jpg"
 import voice from "./voiceRecognation.jpg"
 
-import perfilcom from "./perfilCom.jpeg"
+import perfilcom from "./perfilCom.jpg"
 
 
 
