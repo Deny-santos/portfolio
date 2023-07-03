@@ -3,7 +3,7 @@ import "./sucess.css"
 
 const Sucess = ({text = "", show = false, top = false}) => {
     return (
-        <span className={` message__container ${show ? "show" : ""} ${top ? "top": "bottom"}`}>
+        <span className={` message__container ${show && "show"} ${top && "top"}`}>
             {text}
             <div className='progress'>
                 

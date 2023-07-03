@@ -2,7 +2,6 @@ header {
     height: 105vh;
     padding-top: 3rem;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .header__container {
@@ -50,12 +49,15 @@ header {
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 0 1.5rem;
+    
+    box-shadow: rgba(15, 166, 204, 0.77) 0px 10px 40px 1px;
+    z-index: 100;
 }
 
 .me img {
-    margin-top: -20px;
+    margin-top: 80px;
 
-    margin-top: 70px;
+    
 }
 
 /* =============== scroll down ================== */
